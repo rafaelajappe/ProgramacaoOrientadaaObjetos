@@ -1,19 +1,28 @@
 public class Produto {
+
     String nome;
-    Double preco;
+    double preco;
     int estoque;
 
-
-    void exibirInfo() {
-        System.out.println("Produto:" + nome + "Preço:" + preco + "Estoque atual:" + estoque);
+    public Produto(String nome, double preco, int estoque) {
+        this.nome = nome;
+        this.preco = preco;
+        this.estoque = estoque;
+        
+    public void exibirInfo() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Preço: R$ " + preco);
+        System.out.println("Estoque: " + estoque);
+        System.out.println("--------------------");
     }
 
-    void vender (int quant) {
-        estoque = estoque - quant;
-        if (estoque < 0) {
+    public void vender(int qtd) {
 
-        System.out.println("fOI REDUZIDO " + quant +"do estoque"  + 
-            "O estoque atual é : " + estoque);
- 
-
+        if (qtd <= estoque) {
+            estoque = estoque - qtd;
+            System.out.println("Venda realizada com sucesso!");
+        } else {
+            System.out.println("Venda não realizada! Estoque insuficiente.");
+        }
+    }
 }
