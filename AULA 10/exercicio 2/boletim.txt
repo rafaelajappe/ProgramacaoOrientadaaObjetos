@@ -1,0 +1,5 @@
+BOLETIM ESCOLAR
+Aluno: Joao
+Notas: [5.0, 6.0, 7.0]
+Media: 6.0
+Situacao: Reprovado
